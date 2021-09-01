@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Numbers</title>
+</head>
+<body>
+<h1>Guess THE number between 1-100</h1>
+    <p>Enter a guess: </p>
+    <input type = "text" id = "nmb" class = "nmb">
+    <input type = "submit" value = "Submit guess" class = "attempt" id = "attempt">
+<script type = "text/javascript">
+    var y = Math.floor(Math.random() * 10 + 1);
+    var g=1;
+    document.getElementById("attempt").onclick = function(){
+   var x = document.getElementById("nmb").value;
+   if(x == y)
+   {
+       window.alert("CONGRATULATIONS!!! YOU DID IT IN "+ g + " ATTEMPTS.");
+   }
+   else if(x > y)
+   {
+       g++;
+       alert("SORRY! TRY A LOWER NUMBER.:|");
+   }
+   else
+   {
+       g++;
+       alert("SORRY!! TRY A HIGHER NUMBER.:\")
+   }
+}
+</script>
+</body>
+</html>
